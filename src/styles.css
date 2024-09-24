@@ -1,0 +1,45 @@
+.welcome-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif; /* Replace with your desired pop font */
+    font-size: 3rem; /* Adjust font size as necessary */
+    color: white;
+    z-index: 10;
+    pointer-events: none; /* Allow clicks to go through */
+}
+
+.left {
+    left: 10px; /* Adjust as needed */
+}
+
+.right {
+    right: 10px; /* Adjust as needed */
+}
+
+.welcome-word-container {
+    display: flex; /* Align letters in a row */
+    margin-bottom: 20px; /* Space between words */
+}
+
+.welcome-word {
+    display: inline-block; /* Makes each letter block-level for transform effects */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: auto; /* Allow hover effect */
+    font-weight: bold; /* Makes the font bold */
+}
+
+/* Keyframes for letter movement */
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(calc(-10px + (20 * var(--randomX))), calc(-10px + (20 * var(--randomY))));
+    }
+}
+
+.welcome-word:hover {
+    transform: scale(0) rotate(360deg); /* Scale down and rotate */
+    opacity: 0; /* Fade out */
+}
