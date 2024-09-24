@@ -66,9 +66,9 @@ const ShootingStars = () => {
 const RotatingModel = () => {
   const ref = useRef();
 
-  const randomRotationSpeedX = Math.random() * -0.01;
-  const randomRotationSpeedY = Math.random() * -0.01;
-  const randomRotationSpeedZ = Math.random() * 0.01;
+  const randomRotationSpeedX = Math.random() * -0.001;
+  const randomRotationSpeedY = Math.random() * -0.001;
+  const randomRotationSpeedZ = Math.random() * 0.001;
 
   useFrame(() => {
     if (ref.current) {
